@@ -1,36 +1,64 @@
-public class Triangle implements TexObject {
+import java.util.HashSet;
 
-    private Point2D vertex1;
-    private Point2D vertex2;
-    private Point2D vertex3;
+public class Triangle {
 
-    Triangle(Point2D vertex1, Point2D vertex2, Point2D vertex3) {
-        this.vertex1 = vertex1;
-        this.vertex2 = vertex2;
-        this.vertex3 = vertex3;
+    private Segment side1;
+    private Segment side2;
+    private Segment side3;
+
+    private double perimeter = -1;
+
+    private HashSet<Element> elements = new HashSet<>();
+
+    public Triangle(double side1, double side2, double side3) {
+        this.side1 = new Segment(side1, new Point2D('A'), new Point2D('B'));
+        this.side2 = new Segment(side2, this.side1.getDot2(), new Point2D('C'));
+        this.side3 = new Segment(side3, this.side2.getDot2(), this.side1.getDot1());
+
+        elements.add(Element.SIDE1);
+        elements.add(Element.SIDE2);
+        elements.add(Element.SIDE3);
+
     }
 
-    @Override
-    public String toTexNotation() {
-        StringBuilder builder = new StringBuilder();
 
-        builder.append("\\begin{tikzpicture}\n");
-
-        builder.append(vertex1.toTexNotation() + "\n");
-        builder.append(vertex2.toTexNotation() + "\n");
-        builder.append(vertex3.toTexNotation() + "\n");
-
-        builder.append("\\draw (" + vertex1.getX() +"," + vertex1.getY() + ")\n");
-        builder.append("-- (" + vertex2.getX() + "," + vertex2.getY() + ") \n");
-        builder.append("-- (" + vertex3.getX() + "," + vertex3.getY() + ") \n");
-        builder.append("-- cycle;\n");
-        builder.append("\\end{tikzpicture}\n");
-
-        return builder.toString();
+    public void setSide1(Segment side1) {
+        this.side1 = side1;
     }
 
-    @Override
-    public String toTexSingle() {
-        return null;
+    public void setSide2(Segment side2) {
+        this.side2 = side2;
+    }
+
+    public void setSide3(Segment side3) {
+        this.side3 = side3;
+    }
+
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+
+    public Segment getSide1() {
+        return side1;
+    }
+
+    public Segment getSide2() {
+        return side2;
+    }
+
+    public Segment getSide3() {
+        return side3;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    public HashSet<Element> getElements() {
+        return elements;
+    }
+
+    public void setAsKnown(Element element) {
+        this.elements.add(element);
     }
 }

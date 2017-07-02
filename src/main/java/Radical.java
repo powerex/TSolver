@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 public class Radical implements TexObject {
 
     private int radical_init;
@@ -55,18 +57,21 @@ public class Radical implements TexObject {
         }
     }
 
+    @NotNull
     public static Radical multiple(Radical left, Radical right) {
         int radical = left.getRadical() * right.getRadical();
         int multiplier = left.getMultiplier() * right.getMultiplier();
         return new Radical(radical, multiplier);
     }
 
+    @NotNull
     public static Radical divide(Radical numerator, Radical denomionator) {
         int radical = numerator.getRadical() / denomionator.getRadical();
         int multiplier = numerator.getMultiplier() / denomionator.getMultiplier();
         return new Radical(radical, multiplier);
     }
 
+    @NotNull
     public static Radical add(Radical left, Radical right) throws NoEqualsRadical {
         if (left.getRadical() != right.getRadical())
             throw new NoEqualsRadical();

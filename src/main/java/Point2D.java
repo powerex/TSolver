@@ -26,9 +26,12 @@ public class Point2D implements TexObject{
         this(x, y, letter, -1);
     }
 
-
     public Point2D(double x, double y) {
         this(x, y, 'A');
+    }
+
+    public Point2D(char letter) {
+        this(0, 0, letter);
     }
 
     public Hat getHat() {

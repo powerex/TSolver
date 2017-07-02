@@ -18,7 +18,7 @@ public class CreateTex {
             writer.write("-- cycle;\n");
             writer.write("\\end{tikzpicture}\n");*/
 
-            Triangle t = new Triangle(
+            TexTriangle t = new TexTriangle(
                     new Point2D(0,0, 'A'),
                     new Point2D(3,0, 'B', Hat.PRIME),
                     new Point2D(3,3, 'C', 2)
