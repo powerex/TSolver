@@ -26,6 +26,13 @@ public class RadicalTest {
         assertEquals(10, r2.getMultiplier());
     }
 
+/*    @Test
+    public void isNegative() {
+        assertEquals(false, r.isNegative());
+        assertEquals(false, r2.isNegative());
+        assertEquals(true, new Radical(4, -2).isNegative());
+    }*/
+
     @Test
     public void toTex() throws Exception {
         assertEquals("$4\\sqrt{2}$", r.toTexSingle());

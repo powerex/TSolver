@@ -77,6 +77,22 @@ public class Radical implements TexObject {
         }
     }
 
+    public double getValue() {
+        return multiplier * Math.sqrt(radical);
+    }
+
+    public boolean isNegative() {
+        return multiplier < 0;
+    }
+
+    public boolean equalZero() {
+        return multiplier == 0 || radical == 0;
+    }
+
+    public boolean equalOne() {
+        return multiplier == 1 && radical == 1;
+    }
+
     @Override
     public String toTexSingle() {
         if (radical == 0 || multiplier == 0) {
