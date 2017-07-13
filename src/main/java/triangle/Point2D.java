@@ -1,4 +1,8 @@
-public class Point2D implements TexObject{
+package triangle;
+
+import tex.TexObject;
+
+public class Point2D implements TexObject {
 
     private double x;
     private double y;

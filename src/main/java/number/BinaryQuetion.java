@@ -1,3 +1,7 @@
+package number;
+
+import tex.TexObject;
+
 public class BinaryQuetion implements TexObject {
 
     private Radical a;

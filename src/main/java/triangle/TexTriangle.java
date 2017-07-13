@@ -1,3 +1,7 @@
+package triangle;
+
+import tex.TexObject;
+
 public class TexTriangle implements TexObject {
 
     private Point2D vertex1;

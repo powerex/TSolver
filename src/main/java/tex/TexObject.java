@@ -1,3 +1,5 @@
+package tex;
+
 public interface TexObject {
 
     String toTexNotation();

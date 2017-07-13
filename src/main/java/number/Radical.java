@@ -1,4 +1,7 @@
+package number;
+
 import org.jetbrains.annotations.NotNull;
+import tex.TexObject;
 
 public class Radical implements TexObject {
 

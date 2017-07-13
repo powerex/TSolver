@@ -1,3 +1,5 @@
+package triangle;
+
 public enum Element {
 
     SIDE1, SIDE2, SIDE3,

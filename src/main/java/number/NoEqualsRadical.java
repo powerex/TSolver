@@ -1,3 +1,5 @@
+package number;
+
 public class NoEqualsRadical extends ArithmeticException {
 
     public NoEqualsRadical() {

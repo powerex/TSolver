@@ -1,3 +1,10 @@
+import number.BinaryQuetion;
+import number.Radical;
+import tex.RunCommand;
+import triangle.Hat;
+import triangle.Point2D;
+import triangle.TexTriangle;
+
 import java.io.*;
 
 public class CreateTex {
@@ -18,7 +25,7 @@ public class CreateTex {
             writer.write("-- cycle;\n");
             writer.write("\\end{tikzpicture}\n");*/
 
-            TexTriangle t = new TexTriangle(
+            /*TexTriangle t = new TexTriangle(
                     new Point2D(0,0, 'A'),
                     new Point2D(3,0, 'B', Hat.PRIME),
                     new Point2D(3,3, 'C', 2)
@@ -26,7 +33,7 @@ public class CreateTex {
 
             writer.write(t.toTexNotation());
 
-            writer.write("\\newline\n");
+            writer.write("\\newline\n");*/
 
         } catch (IOException e) {
             e.printStackTrace();

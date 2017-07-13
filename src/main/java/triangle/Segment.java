@@ -1,3 +1,5 @@
+package triangle;
+
 public class Segment {
 
     private double length;

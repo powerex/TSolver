@@ -1,3 +1,4 @@
+import number.Radical;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,7 +31,7 @@ public class RadicalTest {
     public void isNegative() {
         assertEquals(false, r.isNegative());
         assertEquals(false, r2.isNegative());
-        assertEquals(true, new Radical(4, -2).isNegative());
+        assertEquals(true, new number.Radical(4, -2).isNegative());
     }*/
 
     @Test
