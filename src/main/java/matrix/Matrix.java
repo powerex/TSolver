@@ -35,7 +35,7 @@ public class Matrix implements TexObject {
 
     @Override
     public String toTexNotation() {
-        StringBuilder sb = new StringBuilder("\\left(\\begin{array}{");
+        StringBuilder sb = new StringBuilder("A = \\left(\\begin{array}{");
         for (int i=0; i<a[0].length; i++)
             sb.append('c');
         sb.append("}\n");
