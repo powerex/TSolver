@@ -9,6 +9,7 @@ public class ViewPdf {
             Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fileName), "utf-8"));
             writer.write("\\documentclass{article}\n");
             writer.write("\\usepackage{tikz}\n");
+            writer.write("\\usepackage{mathtext}");
             writer.write("\\begin{document}\n");
 
             writer.write("$");

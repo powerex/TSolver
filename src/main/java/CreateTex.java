@@ -62,7 +62,8 @@ public class CreateTex {
     }
 
     public void createPdf() {
-        RunCommand.run("pdflatex text.tex");
+//        RunCommand.run("pdflatex text.tex");
+        RunCommand.run("ps ax | pgrep minidlna");
     }
 
     public static void main(String[] args) {

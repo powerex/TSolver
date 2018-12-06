@@ -103,16 +103,7 @@ public class Radical implements TexObject {
 
     @Override
     public String toTexSingle() {
-        if (radical == 0 || multiplier == 0) {
-            return "$0$";
-        }
-        if (radical == 1) {
-            return "$"+multiplier+"$";
-        }
-        if (multiplier == 1) {
-            return "$\\sqrt{" + radical + "}$";
-        }
-        return "$" + multiplier + "\\sqrt{" + radical + "}$";
+        return "$" + toTexNotation() + "$";
     }
 
     @Override

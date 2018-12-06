@@ -137,7 +137,7 @@ public class Int implements TexObject {
 
 
     public static void main(String[] args) {
-        Int x = new Int(6);
+        Int x = new Int(300);
 
         String s = x.toString() + "=" + x.toTexNotation() + "=" + x.separateSquare();
         ViewPdf.texToPdf("testing.tex", s);
